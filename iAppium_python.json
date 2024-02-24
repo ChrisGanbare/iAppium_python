@@ -1,7 +1,7 @@
 {
     "desired_caps": {
         "platformName": "Android",
-        "deviceName": "<Chris_dell>",
+        "deviceName": "<Chris_dell_>",
         "udid": "<ff38ef8d>",
         "noReset": "false",
         "automationName": "UiAutomator2",
