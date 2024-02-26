@@ -1,2 +1,7 @@
 D:\pythonfile\iAppium_python
+chris:
 pytest -v test/cm_test.py --tc-file D:/pythonfile/iAppium_python/iAppium_python.json --tc-format json
+
+dell:
+pytest -v test/cm_test.py --tc-file D:\pythonProject\iAppium_python\iAppium_python.json --tc-format json
+
