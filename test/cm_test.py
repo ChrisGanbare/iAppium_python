@@ -3,6 +3,7 @@ import unittest
 import time
 import os
 import allure
+from appium.options.android import UiAutomator2Options
 from pytest_testconfig import config
 
 timeout = 30
@@ -23,7 +24,10 @@ class IAppium(unittest.TestCase):
         desired_caps['noReset'] = config['desired_caps']['noReset']
         desired_caps['app'] = f'{os.path.abspath(os.curdir)}/app/ContactManager.apk'
 
-        self.driver = webdriver.Remote(appium_server_url, desired_caps)
+        # 创建UiAutomator2Options对象（但此处不需调用to_capabilities）
+        options = UiAutomator2Options()
+
+        self.driver = webdriver.Remote(appium_server_url, desired_caps,options=options)
 
     def tearDown(self):
         self.driver.quit()
@@ -45,7 +49,7 @@ class IAppium(unittest.TestCase):
         time.sleep(2)
 
     def _click_add_contact_btn(self):
-        elem = self._find_elem_by_xpath('//android.widget.Button[contains(@resource-id,"addContactButton")]')
+        elem = self._find_elem_by_xpath('//android.widget.Button[@content-desc="Add Contact"]')
         print(f'Click add contact button')
         elem.click()
 

@@ -1,12 +1,12 @@
 {
-    "desired_caps": {
-        "platformName": "Android",
-        "deviceName": "<Chris_dell_Yijia7>",
-        "udid": "<ff38ef8d>",
-        "noReset": "false",
-        "automationName": "UiAutomator2",
-        "appPackage": "com.example.android.contactmanager",
-        "appActivity": ".ContactManager"
-    },
-    "appium_server_url": "http://localhost:4723/wd/hub"
+  "appium_server_url": "http://localhost:4723",
+  "desired_caps": {
+    "platformName": "Android",
+    "deviceName": "<device>",
+    "udid": "<ff38ef8d>",
+    "noReset": "false",
+    "automationName": "UiAutomator2",
+    "appPackage": "com.example.android.contactmanager",
+    "appActivity": ".ContactManager"
+  }
 }
